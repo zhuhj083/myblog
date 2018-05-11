@@ -91,6 +91,10 @@ $ hexo d         #可以简写成hexo d
 ```
 注：通过配置github pages的地址到_config.yml中，执行这条命令后，可以一键部署到github pages。
 
+部署到github上需要安装 hexo-deployer-git
+```bash
+$ npm install hexo-deployer-git --save
+```
 ### 清理
 ```bash
 $ hexo clean
