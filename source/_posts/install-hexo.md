@@ -32,7 +32,7 @@ Linux下安装参考上面的文档。
 
 ### 安装node.js
 windows下64位下载地址：
-[https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi](https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi)
+[http://nodejs.cn/download/](http://nodejs.cn/download/)
 
 下载后 一直点下一步下一步即可。
 
