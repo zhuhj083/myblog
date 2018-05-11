@@ -37,7 +37,6 @@ windows下64位下载地址：
 下载后 一直点下一步下一步即可。
 
 安装完成后，cmd中输入path。
-![path](myImages\path.png)
 我们可以看到环境变量中已经包含了C:\Program Files\nodejs\
 
 ### 安装hexo
