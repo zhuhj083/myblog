@@ -12,8 +12,16 @@ node_modules/
 public/
 .deploy*/
 ```
-2. 在博客根目录下，在git bash下依次执行`git init`和 `git remote add origin <server>`
+
+2. 在博客根目录下，在git bash下依次执行
+
+```bash
+git init
+git remote add origin <server>
+```
+
 3. 同步到远程git仓库，在git bash下以此执行
+
 ```bash
 git add .                   #添加目录下所有文件 
 git commit -m “更新说明”     #提交并添加更新说明 
@@ -24,9 +32,9 @@ git push -u origin master   #推送更新到远程仓库
 在B电脑上先安装好nodejs、git、hexo，然后建好hexo文件夹，（然后选做：将备份到远程仓库的文件及文件夹删除），然后执行以下命令：
 ```bash
 git init 
-git remote add origin <server> 
-git fetch --all 
-git reset --hard origin/master
+git remote add origin <server>    #添加远程仓库
+git fetch --all                   #从远程仓库抓取数据到本地,此命令会到远程仓库中拉取所有你本地仓库中还没有的数据
+git reset --hard origin/master    #彻底回退到某个版本，本地的源码也会变为上一个版本的内容
 ```
 
 ## 发布博客后同步
