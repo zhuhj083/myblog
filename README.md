@@ -26,6 +26,8 @@ git add .                   #添加目录下所有文件
 git commit -m “更新说明”     #提交并添加更新说明
 git push -u origin master   #推送更新到远程仓库
 ```
+第一次上传有可能会遇到push失败的情况，那是因为跟SVN一样，github上有一个`README.md`文件没有下载下来。
+我们得先`git pull --rebase origin master`，然后执行`git push -u origin master` 就可以成功啦
 
 ## **B电脑**拉下远程仓库文件
 在B电脑上先安装好nodejs、git、hexo，
