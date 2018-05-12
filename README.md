@@ -29,6 +29,12 @@ git push -u origin master   #推送更新到远程仓库
 第一次上传有可能会遇到push失败的情况，那是因为跟SVN一样，github上有一个`README.md`文件没有下载下来。
 我们得先`git pull --rebase origin master`，然后执行`git push -u origin master` 就可以成功啦
 
+如果你下载了主题，例如next
+你会发现 themes/next 目录里面的文件并没有push到git仓库。
+要解决这个问题，可以使用 `Git` 的[子模块功能](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97)。
+
+
+
 ## **B电脑**拉下远程仓库文件
 在B电脑上先安装好nodejs、git、hexo，
 执行
