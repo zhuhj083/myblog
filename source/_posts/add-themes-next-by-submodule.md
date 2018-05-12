@@ -4,12 +4,29 @@ date: 2018-05-12 17:26:07
 tags: [submodule,hexo]
 categories: hexo
 ---
-# 通过git submodule add 将外部项目添加为子模块
+# Fork
+当我们使用hexo的时候，一般都会使用各种主题，大多数的文档都是叫我们直接`clone`主题到themes目录下，然后再配置`-config.yml`。
+
+但是，当我们将我们的博客上传到我们自己的github上的时候，主题无法与博客数据一起同步。
+
+原因是我们使用了`clone`将主题下载到本地，所以它自己本身也是一个`git`仓库。
+因此它上层的博客仓库就无法对其进行管理。
+
+更好的方法是`fork`一份主题到自己的github上，再将自己的github里的主题当作子模块加载进来。
+
+`fork`的目的在于，我们可以对主题进行各种个性化的定制以及修改，
+并对这些定制进行版本控制。同时，我们还能随时与原主题的更新进行合并。
+
+1、fork `git@github.com:iissnan/hexo-theme-next.git` 到自己的github
+
+# 通过git submodule add 添加为子模块
+
 ```bash
 $ cd your-hexo-site
-$ git submodule add https://github.com/iissnan/hexo-theme-next themes/next
+$ git submodule add https://github.com/someone/hexo-theme-next themes/next
 ```
-运行 git status，还会看到
+
+运行 `git status`，会看到
 ```bash
 $ git status
 On branch master
@@ -19,7 +36,8 @@ Changes to be committed:
         new file:   .gitmodules
         new file:   themes/next
 ```
-首先你注意到有一个.gitmodules文件。这是一个配置文件，保存了项目 URL 和你拉取到的本地子目录
+
+首先你注意到有一个`.gitmodules`文件。
 ```bash
 $ cat .gitmodules
 [submodule "themes/next"]
@@ -27,16 +45,9 @@ $ cat .gitmodules
         url = https://github.com/iissnan/hexo-theme-next
 ```
 
-# push到远端仓库
-将添加的子模块push到远端仓库，分别执行
-```bash
-git add .
-git commit -m '提交信息'
-git push -u origin master
-```
 
 # 修改themes/next主题
-修改了themes/next里面的内容后，git status 查看
+修改了`themes/next`里面的内容后，`git status`查看
 ```bash
 $ git status
 On branch master
@@ -52,11 +63,46 @@ Changes not staged for commit:
         modified:   .gitmodules
         modified:   themes/next (modified content, untracked content)
 ```
-注：可以将每次修改的文件保存下来，在传到其他终端，覆盖其他终端的 themes/next内的相应文件
 
-# 在B电脑上clone我的博客项目后
+# 更新submodule
+submodule里面做了修改操作后，要在submodule和主目录下分别提交
+
+## submodule push 到远端仓库
+将添加的子模块push到远端submodule的仓库，分别执行
+```bash
+git add .
+git commit -m '提交信息'
+git push
+```
+## 主目录内push
+然后再回到父目录,提交Submodule在父项目中的变动
+```bash
+git add .
+git commit -m ' update submodule'
+git push
+```
+
+# clone Submodule
+* 方法一：一种是采用递归的方式clone整个项目
+```bash
+git clone git@github.com:***/***.git --recursive
+```
+
+* 方法二：一种是clone父项目，再更新子项目
+clone我的博客项目后,执行下面更新命令
 ```bash
 cd  your-hexo-site
 git submodule init
 git submodule update
+```
+
+# 更新submodule
+方法一：在父目录直接执行
+```bash
+git submodule foreach git pull
+```
+
+方法二：在submodule目录下执行
+```bash
+git pull
 ```
