@@ -59,6 +59,7 @@ git push -u origin master   #以后每次提交可以直接git pu
 每次写博客之前，先执行
 ```bash
 git pull
+git submodule foreach git pull
 ```
 进行同步更新。
 发布完文章后同样按照上面的*发布博客后同步*。 同步到远程仓库。
