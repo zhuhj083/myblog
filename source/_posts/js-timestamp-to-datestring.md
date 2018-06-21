@@ -15,9 +15,11 @@ categories: js
 	 * @returns {string} formatTime 格式化后的时间 例如： 2017-05-05 12:09:22
 	 */
 	function formatDate(timeStamp, type = 'Y-M-D H:I:S zh', auto = false) {
-	    let time = (timeStamp + '').length === 10 ? new Date(parseInt(timeStamp) * 1000) : new Date(parseInt(timeStamp));
+	    let time = (timeStamp + '').length === 10 ?
+					new Date(parseInt(timeStamp) * 1000) : new Date(parseInt(timeStamp));
 	    let _year = time.getFullYear();
-	    let _month = (time.getMonth() + 1) < 10 ? '0' + (time.getMonth() + 1) : (time.getMonth() + 1);
+	    let _month = (time.getMonth() + 1) < 10 ?
+					'0' + (time.getMonth() + 1) : (time.getMonth() + 1);
 	    let _date = time.getDate() < 10 ? '0' + time.getDate() : time.getDate();
 	    let _hours = time.getHours() < 10 ? '0' + time.getHours() : time.getHours();
 	    let _minutes = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes();
