@@ -14,6 +14,11 @@ $(window).on('scroll',function(){
 	   }
 });
 
+//上滑加载
+$(window).bind("scroll", $.debounce(200, function() {
+		loadMore()
+}));
+
 function loadMore() {
 	if (document.body.scrollTop + $(window).height() > $(document).height() - 200) {
 		if (isloading)
