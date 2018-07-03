@@ -12,6 +12,8 @@ categories: algorithm
 
 ![2-3查找树](https://raw.githubusercontent.com/zhuhj083/storehouse/master/pictures/hexo/2-3tree.PNG "2-3查找树")
 
+<!--more-->
+
 # 红黑二叉查找树
 
 ## 基本思想：
