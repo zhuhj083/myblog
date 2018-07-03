@@ -1,5 +1,5 @@
 ---
-title: java运行时内存区域
+title: java运行时数据区域
 date: 2018-07-03 01:43:12
 tags: [jvm,java]
 categories: java
