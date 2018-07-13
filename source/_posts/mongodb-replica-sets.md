@@ -13,6 +13,8 @@ categories: [mongodb]
 
 同步方式采用异步同步的方式，成员节点每隔2s发送一次heartbeat（pings）。当主节点与其他成员节点通信超时10s后，一个sencondary节点将会被选举为primary节点。
 
+<!--more-->
+
 # 二、环境搭建
 1. 在所有机器上安装mongodb，我安装在/usr/local/ 目录下。
 2. 创建数据目录，/search/odin/data

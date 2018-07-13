@@ -62,6 +62,8 @@ private void sink(int k){
 }
 ```
 
+<!--more-->
+
 # 堆排序
 
 ```java

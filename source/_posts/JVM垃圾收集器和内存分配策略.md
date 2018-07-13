@@ -16,7 +16,6 @@ categories: java
 一个线程中方法调用可能很长，很多方法都处于执行状态。对于执行引擎来说，只有处于栈顶的栈帧才是有效的，称为当前栈帧（Current Stack Frame），与之相关联的方法称为当前方法（Current Method）。
 概念模型上，典型的栈帧主要由 局部变量表（Local Stack Frame）、操作数栈（Operand Stack）、动态链接（Dynamic Linking）、返回地址（Return Address）组成。
 
-<!--more-->
 
 # 对象存活判定算法
 
@@ -24,6 +23,8 @@ categories: java
 给每个对象添加一个引用计数器，每当有一个地方引用它时，计数器值加1，当引用失效时，计数器减1。
 
 但是主流的Java虚拟机里并没有选用这种方法来管理内存，因为它很难解决对象之间相互循环引用的问题。
+
+<!--more-->
 
 ## 可达性分析算法
 主流的实现中，是通过可达性分析（Reachability Analysis）来判断对象是否存活。

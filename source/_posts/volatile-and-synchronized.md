@@ -27,6 +27,8 @@ volatile不会引起线程的上下文切换和调度。
   2. 一个处理器的缓存写回到内存会导致其他处理器的缓存无效
     *  处理器使用嗅探技术保证它的内部缓存、系统内存和其他处理器的缓存的数据在总线上保持一致
 
+<!--more-->
+
 # synchronized
 synchronized实现同步的基础：Java中每一个对象都可以作为锁，具体表现为以下3种形式：
   * 对于普通同步方法，锁是当前实例对象
@@ -36,6 +38,8 @@ synchronized实现同步的基础：Java中每一个对象都可以作为锁，�
 synchronized在JVM里的实现原理是， JVM基于进入和退出Monitor对象来实现方法同步和代码块同步。
 monitorenter指令在编译后插入到同步代码块的开始位置，monitorexit是插入到方法结束和异常处。
 线程执行到monitorexter指令时，将会尝试获取对象所对应的monitor的所有权，即尝试获得对象的锁。
+
+
 
 ## Java对象头
 synchronized用的锁是存在Java对象头里的`Mark Word`。
