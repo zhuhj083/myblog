@@ -15,13 +15,11 @@ Pushy是用于发送APN（iOS、MacOS和Safari）推送通知的Java库，由Tur
 # 使用pushy
 ## 首先引入jar
 ```xml
-	  <!-- ====================================== pushy ====================================== -->
 		<dependency>
 		    <groupId>com.turo</groupId>
 		    <artifactId>pushy</artifactId>
 			<version>0.12.0</version>
 		</dependency>
-    <!-- 下面2个是监控的jar -->
 		<dependency>
     		<groupId>com.turo</groupId>
     		<artifactId>pushy-dropwizard-metrics-listener</artifactId>
@@ -96,6 +94,7 @@ APNs服务器可以保证同时发送1500条消息，当超过这个限制时，
                    }
             	});
 ```
+<!--more-->
 
 ## 完整代码
 ```java
