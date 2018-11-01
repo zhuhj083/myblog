@@ -1,5 +1,5 @@
 ---
-title: ‘IntelliJ IDEA 快捷键与 Eclipse 对比
+title: IntelliJ IDEA 快捷键与 Eclipse 对比
 date: 2018-11-01 14:14:06
 tags: [idea,tool]
 categories: tool
