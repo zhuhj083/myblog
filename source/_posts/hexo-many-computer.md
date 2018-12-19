@@ -47,6 +47,13 @@ git fetch --all                   #从远程仓库抓取数据到本地
 git reset --hard origin/master    #彻底回退到某个版本，本地的源码也会变为上一个版本的内容
 ```
 
+然后同步submodule，更新themes下的主题
+```bash
+cd you-hexo-site
+git submodule init
+git submodule update
+```
+
 ## ***B电脑***发布博客后同步
 在B电脑发布完博客之后，将博客备份同步到远程仓库。
 执行以下命令：
