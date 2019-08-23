@@ -12,6 +12,8 @@ Gradle是一个基于Groovy的构建工具，它使用Groovy来编写构建脚�
 
 下载地址为：http://gradle.org/downloads
 
+## windows下安装gradle
+
 下载后解压到指定目录，我放在了`C:\Program Files\gradle-1.6`
 
 然后配置环境变量
@@ -19,62 +21,62 @@ Gradle是一个基于Groovy的构建工具，它使用Groovy来编写构建脚�
 2. 将系统变量加入到path中
 3. 测试，打开命令窗口输入`gradle -version`,如果安装成功会出现Gradle对应的版本信息。
 
+## Mac下brew安装Gradle
+
+1.打开终端，使用`brew install gradle`完成安装
+
+```sh
+$ brew info gradle
+```
+
+输出：
+
+```sh
+...省略
+==> Downloading https://services.gradle.org/distributions/gradle-5.6-all.zip
+==> Downloading from https://downloads.gradle-dn.com/distributions/gradle-5.6-all.zip
+######################################################################## 100.0%
+🍺  /usr/local/Cellar/gradle/5.6: 14,317 files, 245.0MB, built in 45 seconds
+```
+
+
+
+2.安装成功，默认的安装位置为：
+`/usr/local/Cellar/gradle/5.6`
+
+3.验证是否安装成功，`gradle -v`,打印下面信息说明安装成功
+
+```sh
+$ gradle -v
+
+------------------------------------------------------------
+Gradle 5.6
+------------------------------------------------------------
+
+Build time:   2019-08-14 21:05:25 UTC
+Revision:     f0b9d60906c7b8c42cd6c61a39ae7b74767bb012
+
+Kotlin:       1.3.41
+Groovy:       2.5.4
+Ant:          Apache Ant(TM) version 1.9.14 compiled on March 12 2019
+JVM:          1.8.0_191 (Oracle Corporation 25.191-b12)
+OS:           Mac OS X 10.14.6 x86_64
+```
+
+
+
 # 二.下载Spring
+
 例如要将下载的源码存储到g:\spring下，进入这个目录，输入一下命令
 ```bash
 $ git clone git@github.com:spring-projects/spring-framework.git spring-framework
 ```
 等待一段时间后，完成下载。
-```bash
-$ git clone git@github.com:spring-projects/spring-framework.git
-Cloning into 'spring-framework'...
-remote: Counting objects: 438994, done.
-remote: Compressing objects: 100% (66/66), done.
-remote: Total 438994 (delta 6), reused 39 (delta 0), pack-reused 438914
-Receiving objects: 100% (438994/438994), 111.82 MiB | 2.83 MiB/s, done.
-Resolving deltas: 100% (211139/211139), done.
-Checking out files: 100% (8092/8092), done.
-```
+
 进入这个目录，会看到已经存在了相应的源码信息
 ```bash
 $ cd spring-framework/
 $ ll
-total 53
--rw-r--r-- 1 zhuhaijun 1049089 11072 8月   1 12:06 build.gradle
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 buildSrc/
--rw-r--r-- 1 zhuhaijun 1049089  2395 8月   1 12:06 CODE_OF_CONDUCT.adoc
--rw-r--r-- 1 zhuhaijun 1049089  6401 8月   1 12:06 CONTRIBUTING.md
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 gradle/
--rw-r--r-- 1 zhuhaijun 1049089    30 8月   1 12:06 gradle.properties
--rwxr-xr-x 1 zhuhaijun 1049089  5533 8月   1 12:06 gradlew*
--rw-r--r-- 1 zhuhaijun 1049089  2348 8月   1 12:06 gradlew.bat
--rw-r--r-- 1 zhuhaijun 1049089  2486 8月   1 12:06 import-into-eclipse.md
--rw-r--r-- 1 zhuhaijun 1049089  1868 8月   1 12:06 import-into-idea.md
--rw-r--r-- 1 zhuhaijun 1049089  2290 8月   1 12:06 README.md
--rw-r--r-- 1 zhuhaijun 1049089   831 8月   1 12:06 settings.gradle
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-aop/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-aspects/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-beans/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-context/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-context-indexer/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-context-support/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-core/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-expression/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-framework-bom/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-instrument/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-jcl/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-jdbc/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-jms/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-messaging/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-orm/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-oxm/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-test/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-tx/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-web/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-webflux/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-webmvc/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 spring-websocket/
-drwxr-xr-x 1 zhuhaijun 1049089     0 8月   1 12:06 src/
 ```
 
 
@@ -154,7 +156,13 @@ BUILD SUCCESSFUL in 4m 50s
 
 3.最后编译spring-aspects和spring-aop
 
-### 4.完成
+
+
+### 4.CoroutinesUtils类 找不到的处理
+
+在spring-core项目的kotlin-coroutines的build目录下找到`kotlin-coroutines-5.2.0.BUILD-SNAPSHOT.jar`.再引入spring-core项目中即可。
+
+### 5.完成
 
 到了这里，spring的源码基本编译完成，然后就可以debug了
 
