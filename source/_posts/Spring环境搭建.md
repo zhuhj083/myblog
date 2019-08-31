@@ -164,5 +164,5 @@ BUILD SUCCESSFUL in 4m 50s
 
 ### 5.完成
 
-到了这里，spring的源码基本编译完成，然后就可以debug了
+到了这里，spring的源码基本编译完成，然后就可以学习、调试、修改了。
 
