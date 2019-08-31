@@ -2,7 +2,7 @@
 title: Spring ImportSelector介绍.md
 date: 2019-08-22 16:32:51
 tags: [spring,java]
-categories: java
+categories: spring
 ---
 
 ImportSelecto的用途比较简单，可以根据启动的相关环境配置来决定让哪些类能够被Spring容器初始化。

@@ -2,7 +2,7 @@
 title: Spring中的BeanPostProcessor和BeanFactoryPostProcessor
 date: 2018-08-06 20:26:50
 tags: [spring,java]
-categories: java
+categories: spring
 ---
 BeanPostProcessor和BeanFactoryPostProcessor是Spring初始化Bean时对外暴露的2个接口，两个接口看起来很相似，但是作用和使用场景去不同。
 

@@ -2,7 +2,7 @@
 title: spring在任意类中getBean
 date: 2018-07-25 15:56:55
 tags: [java,spring]
-categories: java
+categories: spring
 ---
 
 # ApplicationContextAware接口

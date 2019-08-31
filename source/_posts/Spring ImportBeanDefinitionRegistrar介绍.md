@@ -2,7 +2,7 @@
 title: Spring ImportBeanDefinitionRegistrar介绍.md
 date: 2019-08-22 16:32:51
 tags: [spring,java]
-categories: java
+categories: spring
 ---
 
 
